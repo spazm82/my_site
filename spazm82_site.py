@@ -48,7 +48,7 @@ def go_streamlit():
     with st.container():
         st.write("**Я не с тобою:**")
         yandex_disk_url = "https://disk.yandex.ru/d/kS37UZEjHnA7Jg"
-        direct_audio_url = f"https://dokpub.com{yandex_disk_url}"
+        direct_audio_url = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url}"
         st.audio(direct_audio_url, format="audio/mpeg")
         st.write("**Прямой дорогой в Ад:**")
         st.audio("audio/2.mp3", format="audio/mpeg")
