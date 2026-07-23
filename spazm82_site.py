@@ -40,7 +40,8 @@ def go_streamlit():
         #st.image("photo/15.jpg")
         st.image("https://streamlit.io")
     with col2:
-        st.image("photo/18.jpg")
+        #st.image("photo/18.jpg")
+        st.image("https://streamlit.io")
 
     st.divider()
 
