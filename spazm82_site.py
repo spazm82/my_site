@@ -46,22 +46,22 @@ def go_streamlit():
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        st.audio("audio/spazm82 - Я не с тобою.mp3", format="audio/mpeg", 
+        st.audio("audio/1.mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Прямой дорогой в Ад:**")
-        st.audio("audio/Прямой дорогой в Ад.mp3", format="audio/mp3", 
+        st.audio("audio/2.mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Час расплаты:**")
-        st.audio("audio/Час расплаты.mp3", format="audio/mp3",
+        st.audio("audio/3.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Последний рубеж:**")
-        st.audio("audio/Последний рубеж(Инструментал).mp3", format="audio/mp3", 
+        st.audio("audio/4.mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Неизбежно:**")
-        st.audio("audio/Неизбежно.mp3", format="audio/mp3",
+        st.audio("audio/5.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Крылья бездорожья:**")
-        st.audio("audio/Крылья бездорожья.mp3", format="audio/mp3",
+        st.audio("audio/6.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
 
 
