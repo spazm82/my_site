@@ -1,4 +1,3 @@
-import base64
 import streamlit as st
 
 
@@ -47,17 +46,7 @@ def go_streamlit():
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        with open("audio/1.mp3", "rb") as audio_file1:
-            audio_bytes1 = audio_file1.read()
-        audio_base64 = base64.b64encode(audio_bytes1).decode()
-        audio_html = f"""
-            <audio controls style="width: 100%;">
-                <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
-                Ваш браузер не поддерживает аудиоэлемент.
-            </audio>
-        """
-        st.markdown(audio_html, unsafe_allow_html=True)
-        #st.audio(audio_bytes1, format="audio/mpeg")
+        st.audio("https://vk.ru/audio-2001932739_148932739")
         st.write("**Прямой дорогой в Ад:**")
         st.audio("audio/2.mp3", format="audio/mpeg")
         st.write("**Час расплаты:**")
