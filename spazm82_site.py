@@ -1,6 +1,17 @@
+import requests
 import streamlit as st
 
 
+def get_yandex_direct_link(public_url):
+    base_api_url = "https://yandex.net"
+    try:
+        # Делаем запрос к API Яндекса
+        response = requests.get(f"{base_api_url}?public_key={public_url}")
+        if response.status_code == 200:
+            return response.json().get("href")
+        return None
+    except Exception:
+        return None
 
 def go_streamlit():
     # Задаём название на вкладке Браузера
@@ -46,7 +57,12 @@ def go_streamlit():
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        st.audio("https://vk.ru/audio-2001932739_148932739")
+        yandex_disk_url = "https://disk.yandex.ru/d/kS37UZEjHnA7Jg"
+        direct_audio_url = get_yandex_direct_link(yandex_disk_url)
+        if direct_audio_url:
+            st.audio(direct_audio_url, format="audio/mpeg")
+        else:
+            st.error("Ошибка загрузки!")
         st.write("**Прямой дорогой в Ад:**")
         st.audio("audio/2.mp3", format="audio/mpeg")
         st.write("**Час расплаты:**")
