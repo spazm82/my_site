@@ -46,23 +46,17 @@ def go_streamlit():
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        st.audio("audio/1.mp3", format="audio/mp3", 
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/1.mp3", format="audio/mpeg")
         st.write("**Прямой дорогой в Ад:**")
-        st.audio("audio/2.mp3", format="audio/mp3", 
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/2.mp3", format="audio/mpeg")
         st.write("**Час расплаты:**")
-        st.audio("audio/3.mp3", format="audio/mp3",
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/3.mp3", format="audio/mpeg")
         st.write("**Последний рубеж:**")
-        st.audio("audio/4.mp3", format="audio/mp3", 
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/4.mp3", format="audio/mpeg")
         st.write("**Неизбежно:**")
-        st.audio("audio/5.mp3", format="audio/mp3",
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/5.mp3", format="audio/mpeg")
         st.write("**Крылья бездорожья:**")
-        st.audio("audio/6.mp3", format="audio/mp3",
-                 sample_rate=None, loop=False, autoplay=False)
+        st.audio("audio/6.mp3", format="audio/mpeg")
 
 
 go_streamlit()
