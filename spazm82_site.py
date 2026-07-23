@@ -3,6 +3,8 @@ import streamlit as st
 
 
 
+st.markdown('<meta name="referrer" content="no-referrer" />', unsafe_allow_html=True)
+
 def go_streamlit():
     # Задаём название на вкладке Браузера
     st.set_page_config(
