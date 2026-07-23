@@ -39,9 +39,9 @@ def go_streamlit():
     # Раздел с фото
     col1, col2 = st.columns(2)
     with col1:
-        st.image("photo/15.jpeg")
+        st.image("photo/IMG_8318.JPG")
     with col2:
-        st.image("photo/18.jpeg")
+        st.image("photo/IMG_8320.JPG")
 
     st.divider()
 
