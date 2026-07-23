@@ -46,10 +46,9 @@ def go_streamlit():
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        with open("/audio/1.mp3", "rb") as audio_file1:
+        with open("audio/1.mp3", "rb") as audio_file1:
             audio_bytes1 = audio_file1.read()
-
-        st.audio(audio_bytes1, format="audio/mp3")
+        st.audio(audio_bytes1, format="audio/mpeg")
         st.write("**Прямой дорогой в Ад:**")
         st.audio("audio/2.mp3", format="audio/mpeg")
         st.write("**Час расплаты:**")
