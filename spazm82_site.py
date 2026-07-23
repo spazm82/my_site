@@ -37,36 +37,32 @@ def go_streamlit():
     # Раздел с фото
     col1, col2 = st.columns(2)
     with col1:
-        st.image("/home/spazm82/Музыка/Гости(фото и видео)/Уральский Рубеж 28_08_2022/155.jpg")
+        st.image("photo/155.jpg")
     with col2:
-        st.image("/home/spazm82/Музыка/Гости(фото и видео)/Уральский Рубеж 28_08_2022/18.jpg")
+        st.image("photo/18.jpg")
 
     st.divider()
 
     # Раздел с музыкой
     with st.container():
         st.write("**Я не с тобою:**")
-        st.audio("/home/spazm82/Музыка/spazm82 - Я не с тобою.mp3", format="audio/mp3", 
+        st.audio("audio/spazm82 - Я не с тобою.mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Прямой дорогой в Ад:**")
-        st.audio("/home/spazm82/Музыка/Прямой дорогой в Ад.mp3", format="audio/mp3", 
+        st.audio("audio/Прямой дорогой в Ад.mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Час расплаты:**")
-        st.audio("/home/spazm82/Музыка/Час расплаты.mp3", format="audio/mp3",
+        st.audio("audio/Час расплаты.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Последний рубеж:**")
-        st.audio("/home/spazm82/Музыка/Последний рубеж(Инструментал).mp3", format="audio/mp3", 
+        st.audio("audio/Последний рубеж(Инструментал).mp3", format="audio/mp3", 
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Неизбежно:**")
-        st.audio("/home/spazm82/Музыка/Неизбежно.mp3", format="audio/mp3",
+        st.audio("audio/Неизбежно.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
         st.write("**Крылья бездорожья:**")
-        st.audio("/home/spazm82/Музыка/Крылья бездорожья.mp3", format="audio/mp3",
-                 sample_rate=None, loop=False, autoplay=False)
-        st.write("**StarCom:**")
-        st.audio("/home/spazm82/Музыка/Instrumental.mp3", format="audio/mp3",
+        st.audio("audio/Крылья бездорожья.mp3", format="audio/mp3",
                  sample_rate=None, loop=False, autoplay=False)
 
 
 go_streamlit()
-
