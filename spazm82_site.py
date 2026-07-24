@@ -112,7 +112,7 @@ def go_streamlit():
 
         st.image("photo/7.jpg")
         st.write("Выходит 03 августа 2026. Но на сайте Вы можете послушать трек уже сейчас!")
-        yandex_disk_url_7 = "https://disk.yandex.ru/d/7CENZjqtT5MFPQ"
+        yandex_disk_url_7 = "https://disk.yandex.ru/d/2ek3R8L7ttYTOA"
         direct_audio_url_7 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
         st.audio(direct_audio_url_7, format="audio/mpeg")
 
