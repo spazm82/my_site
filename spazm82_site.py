@@ -51,6 +51,10 @@ def go_streamlit():
         yandex_disk_url_1 = "https://disk.yandex.ru/d/kS37UZEjHnA7Jg"
         direct_audio_url_1 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_1}"
         st.audio(direct_audio_url_1, format="audio/mpeg")
+        st.link_button("Слушать на Яндекс.Музыка",
+                        url="https://music.yandex.ru/album/41663612/track/150439391?utm_source=web&utm_medium=copy_link",
+                        icon="🎵"
+                    )
 
         st.divider()
         
@@ -58,6 +62,10 @@ def go_streamlit():
         yandex_disk_url_2 = "https://disk.yandex.ru/d/ZrVmO0c002IC_Q"
         direct_audio_url_2 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_2}"
         st.audio(direct_audio_url_2, format="audio/mpeg")
+        st.link_button("Слушать на Яндекс.Музыка",
+                        url="https://music.yandex.ru/album/42189761/track/151638650?utm_source=web&utm_medium=copy_link",
+                        icon="🎵"
+                    )
 
         st.divider()
 
@@ -65,6 +73,10 @@ def go_streamlit():
         yandex_disk_url_3 = "https://disk.yandex.ru/d/ekp-e6qfEQoeVA"
         direct_audio_url_3 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_3}"
         st.audio(direct_audio_url_3, format="audio/mpeg")
+        st.link_button("Слушать на Яндекс.Музыка",
+                        url="https://music.yandex.ru/album/42456817/track/152248352?utm_source=web&utm_medium=copy_link",
+                        icon="🎵"
+                    )
 
         st.divider()
 
@@ -72,6 +84,10 @@ def go_streamlit():
         yandex_disk_url_4 = "https://disk.yandex.ru/d/oWc_cEhxYabZtA"
         direct_audio_url_4 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_4}"
         st.audio(direct_audio_url_4, format="audio/mpeg")
+        st.link_button("Слушать на Яндекс.Музыка",
+                        url="https://music.yandex.ru/album/42579929/track/152507110?utm_source=web&utm_medium=copy_link",
+                        icon="🎵"
+                    )
 
         st.divider()
 
@@ -79,13 +95,26 @@ def go_streamlit():
         yandex_disk_url_5 = "https://disk.yandex.ru/d/yKf5IFXCDGK0jA"
         direct_audio_url_5 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_5}"
         st.audio(direct_audio_url_5, format="audio/mpeg")
+        st.link_button("Слушать на Яндекс.Музыка",
+                        url="https://music.yandex.ru/album/42902440/track/153267290?utm_source=web&utm_medium=copy_link",
+                        icon="🎵"
+                    )
 
         st.divider()
 
         st.image("photo/6.jpg")
+        st.write("Выходит 30 июля 2026. Но на сайте Вы можете послушать трек уже сейчас!")
         yandex_disk_url_6 = "https://disk.yandex.ru/d/BaXC8oNIPwCOqA"
         direct_audio_url_6 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
         st.audio(direct_audio_url_6, format="audio/mpeg")
+
+        st.divider()
+
+        st.image("photo/7.jpg")
+        st.write("Выходит 03 августа 2026. Но на сайте Вы можете послушать трек уже сейчас!")
+        yandex_disk_url_7 = "https://disk.yandex.ru/d/7CENZjqtT5MFPQ"
+        direct_audio_url_7 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
+        st.audio(direct_audio_url_7, format="audio/mpeg")
 
         st.divider()
 
