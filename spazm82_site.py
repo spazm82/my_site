@@ -39,40 +39,40 @@ def go_streamlit():
     # Раздел с фото
     col1, col2 = st.columns(2)
     with col1:
-        st.image("photo/18.jpeg")
+        st.image("photo/8318.jpg")
     with col2:
-        st.image("photo/15.jpeg")
+        st.image("photo/8320.jpg")
 
     st.divider()
 
     # Раздел с музыкой
     with st.container():
-        st.write("**Я не с тобою:**")
+        st.image("photo/1.jpg")
         yandex_disk_url_1 = "https://disk.yandex.ru/d/kS37UZEjHnA7Jg"
         direct_audio_url_1 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_1}"
         st.audio(direct_audio_url_1, format="audio/mpeg")
 
-        st.write("**Прямой дорогой в Ад:**")
+        st.image("photo/2.jpg")
         yandex_disk_url_2 = "https://disk.yandex.ru/d/ZrVmO0c002IC_Q"
         direct_audio_url_2 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_2}"
         st.audio(direct_audio_url_2, format="audio/mpeg")
 
-        st.write("**Час расплаты:**")
+        st.image("photo/3.jpg")
         yandex_disk_url_3 = "https://disk.yandex.ru/d/ekp-e6qfEQoeVA"
         direct_audio_url_3 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_3}"
         st.audio(direct_audio_url_3, format="audio/mpeg")
 
-        st.write("**Последний рубеж:**")
+        st.image("photo/4.jpg")
         yandex_disk_url_4 = "https://disk.yandex.ru/d/oWc_cEhxYabZtA"
         direct_audio_url_4 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_4}"
         st.audio(direct_audio_url_4, format="audio/mpeg")
 
-        st.write("**Неизбежно:**")
+        st.image("photo/5.jpg")
         yandex_disk_url_5 = "https://disk.yandex.ru/d/yKf5IFXCDGK0jA"
         direct_audio_url_5 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_5}"
         st.audio(direct_audio_url_5, format="audio/mpeg")
 
-        st.write("**Крылья бездорожья:**")
+        st.image("photo/6.jpg")
         yandex_disk_url_6 = "https://disk.yandex.ru/d/BaXC8oNIPwCOqA"
         direct_audio_url_6 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
         st.audio(direct_audio_url_6, format="audio/mpeg")
