@@ -125,5 +125,14 @@ def go_streamlit():
     with col2:
         st.image("photo/15.jpeg")
 
+    st.divider()
+
+    # Раздел на ссылки друзей
+    col_1, col_2 = st.columns(2)
+    with col_1:
+        st.link_button("VK замечательного фотографа Евгения Фазлеева", url="https://vk.ru/club185811187", icon=":material/recommend:")
+    with col_2:
+        st.link_button("Организация концертов Live Progect | Миасс", url="https://vk.ru/liveproject_miass", icon=":material/recommend:")
+
 
 go_streamlit()
