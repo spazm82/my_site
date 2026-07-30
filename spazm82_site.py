@@ -103,7 +103,6 @@ def go_streamlit():
         st.divider()
 
         st.image("photo/6.jpg")
-        st.write("Выходит 30 июля 2026. Но на сайте Вы можете послушать трек уже сейчас!")
         yandex_disk_url_6 = "https://disk.yandex.ru/d/BaXC8oNIPwCOqA"
         direct_audio_url_6 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
         st.audio(direct_audio_url_6, format="audio/mpeg")
@@ -111,10 +110,14 @@ def go_streamlit():
         st.divider()
 
         st.image("photo/7.jpg")
-        st.write("Выходит 03 августа 2026. Но на сайте Вы можете послушать трек уже сейчас!")
-        yandex_disk_url_7 = "https://disk.yandex.ru/d/7CENZjqtT5MFPQ"
-        direct_audio_url_7 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_7}"
-        st.audio(direct_audio_url_7, format="audio/mpeg")
+        st.write("Выходит 03 августа 2026.")
+        st.link_button("Можно сделать пресейв, чтобы точно не пропустить выход релиза!",
+                        url="https://band.link/Sj9uI",
+                        icon="🎵"
+                    )
+        #yandex_disk_url_7 = "https://disk.yandex.ru/d/7CENZjqtT5MFPQ"
+        #direct_audio_url_7 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_7}"
+        #st.audio(direct_audio_url_7, format="audio/mpeg")
 
         st.divider()
 
