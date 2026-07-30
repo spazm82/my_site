@@ -106,9 +106,9 @@ def go_streamlit():
                       в гости к **spazm82**, дорогой друг!""")
 
     # Раздел с кнопками на карточки музыканта
-    #buttons(BUTTONS_SOC)
+    buttons(BUTTONS_SOC)
     # Ссылка на радио LP
-    #buttons("Радио LP где можно заказать мои релизы к прослушиванию", "https://radio.lp-media.ru/", ":material/radio:")
+    buttons(["Радио LP где можно заказать мои релизы к прослушиванию", "https://radio.lp-media.ru/", ":material/radio:"])
     st.divider()
 
     # Раздел с фото
@@ -138,7 +138,7 @@ def go_streamlit():
     st.divider()
 
     # Раздел на ссылки друзей
-    #buttons(BUTTONS_FRIENDS)
+    buttons(BUTTONS_FRIENDS)
 
 
 go_streamlit()
