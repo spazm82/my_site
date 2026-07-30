@@ -70,7 +70,7 @@ def buttons(button_list: list):
     if len(button_list) == 3:
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.link_button(button_list[0][1], url=button_list[0][1], icon=button_list[2])
+            st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
         with col2:
             st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
         with col3:
