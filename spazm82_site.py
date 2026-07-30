@@ -67,23 +67,22 @@ def photos(photo_list: list):
         st.image(photo_list[1])
 
 def buttons(button_list: list):
-  for chek_list in button_list:
-        if len(button_list) == 3:
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
-            with col2:
-                 st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
-            with col3:
-                st.link_button(button_list[2][0], url=button_list[2][1], icon=button_list[2][2])
-        elif len(button_list) == 2:
-            col1, col2 = st.columns(2)
-            with col1:
-                st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
-            with col2:
-                st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
-        else:
-            st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
+    if len(button_list) == 3:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.link_button(button_list[0][1], url=button_list[0][1], icon=button_list[2])
+        with col2:
+              st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
+        with col3:
+             st.link_button(button_list[2][0], url=button_list[2][1], icon=button_list[2][2])
+     elif len(button_list) == 2:
+        col1, col2 = st.columns(2)
+         with col1:
+             st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
+        with col2:
+             st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
+     else:
+        st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
 
 def go_streamlit():
     # Задаём название на вкладке Браузера
