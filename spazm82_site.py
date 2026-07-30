@@ -72,20 +72,20 @@ def buttons(button_list: list):
             col1, col2, col3 = st.columns(3)
             for buttons in chek_list:
                 with col1:
-                    st.link_button(buttons[0], url=buttons[1], icon=buttons[2])
+                    st.link_button(chek_list[0][0], url=chek_list[0][1], icon=chek_list[0][2])
                 with col2:
-                    st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+                    st.link_button(chek_list[1][0], url=chek_list[1][1], icon=chek_list[1][2])
                 with col3:
-                    st.link_button(buttons[2][0], url=buttons[2][1], icon=buttons[2][2])
+                    st.link_button(chek_list[2][0], url=chek_list[2][1], icon=chek_list[2][2])
         elif len(chek_list) == 2:
             col1, col2 = st.columns(2)
             for buttons in chek_list:
                 with col1:
-                    st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+                    st.link_button(chek_list[0][0], url=chek_list[0][1], icon=chek_list[0][2])
                 with col2:
-                    st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+                    st.link_button(chek_list[1][0], url=chek_list[1][1], icon=chek_list[1][2])
         else:
-            st.link_button(button_list[0], url=button_list[1], icon=button_list[2])
+            st.link_button(chek_list[0], url=chek_list[1], icon=chek_list[2])
 
 def go_streamlit():
     # Задаём название на вкладке Браузера
