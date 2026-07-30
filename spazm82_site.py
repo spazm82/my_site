@@ -67,6 +67,7 @@ def photos(photo_list: list):
         st.image(photo_list[1])
 
 def buttons(button_list: list):
+  st.write(len(button_list))
   for chek_list in button_list:
         if len(button_list) == 3:
             col1, col2, col3 = st.columns(3)
