@@ -72,7 +72,7 @@ def buttons(button_list: list):
             col1, col2, col3 = st.columns(3)
             for buttons in chek_list:
                 with col1:
-                    st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+                    st.link_button(buttons[0], url=buttons[1], icon=buttons[2])
                 with col2:
                     st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
                 with col3:
