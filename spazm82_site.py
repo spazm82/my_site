@@ -67,24 +67,25 @@ def photos(photo_list: list):
         st.image(photo_list[1])
 
 def buttons(button_list: list):
-    if len(button_list) == 3:
-        col1, col2, col3 = st.columns(3)
-        for buttons in button_list:
-            with col1:
-                st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
-            with col2:
-                st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
-            with col3:
-                st.link_button(buttons[2][0], url=buttons[2][1], icon=buttons[2][2])
-    elif len(button_list) == 2:
-        col1, col2 = st.columns(2)
-        for buttons in button_list:
-            with col1:
-                st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
-            with col2:
-                st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
-    else:
-        st.link_button(button_list[0], url=button_list[1], icon=button_list[2])
+  for chek_list in button_list:
+        if len(chek_list) == 3:
+            col1, col2, col3 = st.columns(3)
+            for buttons in chek_list:
+                with col1:
+                    st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+                with col2:
+                    st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+                with col3:
+                    st.link_button(buttons[2][0], url=buttons[2][1], icon=buttons[2][2])
+        elif len(chek_list) == 2:
+            col1, col2 = st.columns(2)
+            for buttons in chek_list:
+                with col1:
+                    st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+                with col2:
+                    st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+        else:
+            st.link_button(button_list[0], url=button_list[1], icon=button_list[2])
 
 def go_streamlit():
     # Задаём название на вкладке Браузера
@@ -108,7 +109,7 @@ def go_streamlit():
     # Раздел с кнопками на карточки музыканта
     buttons(BUTTONS_SOC)
     # Ссылка на радио LP
-    buttons(["Радио LP где можно заказать мои релизы к прослушиванию", "https://radio.lp-media.ru/", ":material/radio:"])
+    buttons([["Радио LP где можно заказать мои релизы к прослушиванию", "https://radio.lp-media.ru/", ":material/radio:"]])
     st.divider()
 
     # Раздел с фото
