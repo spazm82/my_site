@@ -72,15 +72,15 @@ def buttons(button_list: list):
         with col1:
             st.link_button(button_list[0][1], url=button_list[0][1], icon=button_list[2])
         with col2:
-              st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
+            st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
         with col3:
-             st.link_button(button_list[2][0], url=button_list[2][1], icon=button_list[2][2])
+            st.link_button(button_list[2][0], url=button_list[2][1], icon=button_list[2][2])
     elif len(button_list) == 2:
         col1, col2 = st.columns(2)
         with col1:
-             st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
+            st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
         with col2:
-             st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
+            st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
     else:
         st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
 
