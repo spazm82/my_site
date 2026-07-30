@@ -75,13 +75,13 @@ def buttons(button_list: list):
               st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
         with col3:
              st.link_button(button_list[2][0], url=button_list[2][1], icon=button_list[2][2])
-     elif len(button_list) == 2:
+    elif len(button_list) == 2:
         col1, col2 = st.columns(2)
          with col1:
              st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
         with col2:
              st.link_button(button_list[1][0], url=button_list[1][1], icon=button_list[1][2])
-     else:
+    else:
         st.link_button(button_list[0][0], url=button_list[0][1], icon=button_list[0][2])
 
 def go_streamlit():
