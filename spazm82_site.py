@@ -68,7 +68,7 @@ def photos(photo_list: list):
 
 def buttons(button_list: list):
   for chek_list in button_list:
-        if len(chek_list) == 3:
+        if len(button_list) == 3:
             col1, col2, col3 = st.columns(3)
             for buttons in chek_list:
                 with col1:
@@ -77,7 +77,7 @@ def buttons(button_list: list):
                     st.link_button(chek_list[1][0], url=chek_list[1][1], icon=chek_list[1][2])
                 with col3:
                     st.link_button(chek_list[2][0], url=chek_list[2][1], icon=chek_list[2][2])
-        elif len(chek_list) == 2:
+        elif len(button_list) == 2:
             col1, col2 = st.columns(2)
             for buttons in chek_list:
                 with col1:
