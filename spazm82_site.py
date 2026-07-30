@@ -2,7 +2,89 @@ import streamlit as st
 
 
 
+RELEASES = [{'photo': "photo/1.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/kS37UZEjHnA7Jg",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/Vc04a",
+             'icon_button': "🎵"},
+             {'photo': "photo/2.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/ZrVmO0c002IC_Q",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/VOIBM",
+             'icon_button': "🎵"},
+             {'photo': "photo/3.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/ekp-e6qfEQoeVA",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/uc3qM",
+             'icon_button': "🎵"},
+             {'photo': "photo/4.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/oWc_cEhxYabZtA",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/LYSJX",
+             'icon_button': "🎵"},
+             {'photo': "photo/5.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/yKf5IFXCDGK0jA",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/pFjS1",
+             'icon_button': "🎵"},
+             {'photo': "photo/6.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/BaXC8oNIPwCOqA",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/xp6Oi",
+             'icon_button': "🎵"},
+            ]
+
+PHOTO_PRE = ["photo/8318.jpg", "photo/8320.jpg"]
+PHOTO_POST = ["photo/18.jpeg", "photo/15.jpeg"]
+BUTTONS_SOC = [["Карточка музыканта на VK", "https://vk.ru/artist/spazm82", ":material/recommend:"],
+                ["Карточка музыканта на Яндекс.Музыка", "https://music.yandex.ru/artist/25824937", ":material/recommend:"],
+                ["Карточка музыканта на 4beat", "https://4beat.ru/id13934", ":material/recommend:"]
+            ]
+BUTTONS_FRIENDS = [["VK замечательного фотографа Евгения Фазлеева", "https://vk.ru/club185811187", ":material/recommend:"],
+                   ["Организация концертов Live Progect | Миасс", "https://vk.ru/liveproject_miass", ":material/recommend:"]    
+                ]
+
 st.markdown('<meta name="referrer" content="no-referrer" />', unsafe_allow_html=True)
+
+def releases(photo: str, audio_ya_link: str, format_audio: str, 
+              button_name: str, url_button: str, icon_button: str):
+    st.image(photo)
+    #direct_audio_url = f"https://getfile.dokpub.com/yandex/get/{audio_ya_link}"
+    #st.audio(direct_audio_url, format=format_audio)
+    st.link_button(button_name, url=url_button, icon=icon_button)
+
+def photos(photo_list: list):
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image(photo_list[0])
+    with col2:
+        st.image(photo_list[1])
+
+def buttons(button_list: list):
+    if len(button_list) == 3:
+        col1, col2, col3 = st.columns(3)
+        for buttons in button_list:
+            with col1:
+                st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+            with col2:
+                st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+            with col3:
+                st.link_button(buttons[2][0], url=buttons[2][1], icon=buttons[2][2])
+    elif len(button_list) == 2:
+        col1, col2 = st.columns(2)
+        for buttons in button_list:
+            with col1:
+                st.link_button(buttons[0][0], url=buttons[0][1], icon=buttons[0][2])
+            with col2:
+                st.link_button(buttons[1][0], url=buttons[1][1], icon=buttons[1][2])
+    else:
+        st.link_button(button_list[0], url=button_list[1], icon=button_list[2])
 
 def go_streamlit():
     # Задаём название на вкладке Браузера
@@ -24,122 +106,39 @@ def go_streamlit():
                       в гости к **spazm82**, дорогой друг!""")
 
     # Раздел с кнопками на карточки музыканта
-    col_butt1, col_butt2, col_butt3 = st.columns(3)
-    with col_butt1:
-        st.link_button("Карточка музыканта на VK", url="https://vk.ru/artist/spazm82", icon=":material/recommend:")
-    with col_butt2:
-        st.link_button("Карточка музыканта на Яндекс.Музыка", url="https://music.yandex.ru/artist/25824937", icon=":material/recommend:")
-    with col_butt3:
-        st.link_button("Карточка музыканта на 4beat", url="https://4beat.ru/id13934", icon=":material/recommend:")
+    buttons(BUTTONS_SOC)
     # Ссылка на радио LP
-    st.link_button("Радио LP где можно заказать мои релизы к прослушиванию", url="https://radio.lp-media.ru/", icon=":material/radio:")
-
+    buttons("Радио LP где можно заказать мои релизы к прослушиванию", "https://radio.lp-media.ru/", ":material/radio:")
     st.divider()
 
     # Раздел с фото
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image("photo/8318.jpg")
-    with col2:
-        st.image("photo/8320.jpg")
-
+    photos(PHOTO_PRE)
     st.divider()
 
     # Раздел с музыкой
     with st.container():
-        st.image("photo/1.jpg")
-        #yandex_disk_url_1 = "https://disk.yandex.ru/d/kS37UZEjHnA7Jg"
-        #direct_audio_url_1 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_1}"
-        #st.audio(direct_audio_url_1, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/Vc04a",
-                        icon="🎵"
-                    )
+        for releas in RELEASES:
+            releases(releas['photo'], releas['audio_ya_link'],
+            releas['format_audio'], releas['button_name'],
+            releas['url_button'], releas['icon_button'])
 
-        st.divider()
+            st.divider()
         
-        st.image("photo/2.jpg")
-        #yandex_disk_url_2 = "https://disk.yandex.ru/d/ZrVmO0c002IC_Q"
-        #direct_audio_url_2 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_2}"
-        #st.audio(direct_audio_url_2, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/VOIBM",
-                        icon="🎵"
-                    )
-
-        st.divider()
-
-        st.image("photo/3.jpg")
-        #yandex_disk_url_3 = "https://disk.yandex.ru/d/ekp-e6qfEQoeVA"
-        #direct_audio_url_3 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_3}"
-        #st.audio(direct_audio_url_3, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/uc3qM",
-                        icon="🎵"
-                    )
-
-        st.divider()
-
-        st.image("photo/4.jpg")
-        #yandex_disk_url_4 = "https://disk.yandex.ru/d/oWc_cEhxYabZtA"
-        #direct_audio_url_4 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_4}"
-        #st.audio(direct_audio_url_4, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/LYSJX",
-                        icon="🎵"
-                    )
-
-        st.divider()
-
-        st.image("photo/5.jpg")
-        #yandex_disk_url_5 = "https://disk.yandex.ru/d/yKf5IFXCDGK0jA"
-        #direct_audio_url_5 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_5}"
-        #st.audio(direct_audio_url_5, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/pFjS1",
-                        icon="🎵"
-                    )
-
-        st.divider()
-
-        st.image("photo/6.jpg")
-        #yandex_disk_url_6 = "https://disk.yandex.ru/d/BaXC8oNIPwCOqA"
-        #direct_audio_url_6 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_6}"
-        #st.audio(direct_audio_url_6, format="audio/mpeg")
-        st.link_button("Слушать на стриминговых площадках",
-                        url="https://band.link/xp6Oi",
-                        icon="🎵"
-                    )
-
-        st.divider()
-
         st.image("photo/7.jpg")
         st.write("Выходит 03 августа 2026.")
         st.link_button("Можно сделать пресейв, чтобы точно не пропустить выход релиза!",
                         url="https://band.link/Sj9uI",
                         icon="🎵"
                     )
-        #yandex_disk_url_7 = "https://disk.yandex.ru/d/7CENZjqtT5MFPQ"
-        #direct_audio_url_7 = f"https://getfile.dokpub.com/yandex/get/{yandex_disk_url_7}"
-        #st.audio(direct_audio_url_7, format="audio/mpeg")
 
         st.divider()
 
     # Раздел с фото
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image("photo/18.jpeg")
-    with col2:
-        st.image("photo/15.jpeg")
-
+    photos(PHOTO_POST)
     st.divider()
 
     # Раздел на ссылки друзей
-    col_1, col_2 = st.columns(2)
-    with col_1:
-        st.link_button("VK замечательного фотографа Евгения Фазлеева", url="https://vk.ru/club185811187", icon=":material/recommend:")
-    with col_2:
-        st.link_button("Организация концертов Live Progect | Миасс", url="https://vk.ru/liveproject_miass", icon=":material/recommend:")
+    buttons(BUTTONS_FRIENDS)
 
 
 go_streamlit()
