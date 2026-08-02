@@ -55,8 +55,8 @@ st.markdown('<meta name="referrer" content="no-referrer" />', unsafe_allow_html=
 def releases(photo: str, audio_ya_link: str, format_audio: str, 
               button_name: str, url_button: str, icon_button: str):
     st.image(photo)
-    #direct_audio_url = f"https://getfile.dokpub.com/yandex/get/{audio_ya_link}"
-    #st.audio(direct_audio_url, format=format_audio)
+    direct_audio_url = f"https://getfile.dokpub.com/yandex/get/{audio_ya_link}"
+    st.audio(direct_audio_url, format=format_audio)
     st.link_button(button_name, url=url_button, icon=icon_button)
 
 def photos(photo_list: list):
