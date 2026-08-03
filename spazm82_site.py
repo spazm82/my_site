@@ -38,6 +38,12 @@ RELEASES = [{'photo': "photo/1.jpg",
              'button_name': "Слушать на стриминговых площадках",
              'url_button': "https://band.link/xp6Oi",
              'icon_button': "🎵"},
+            {'photo': "photo/7.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/7CENZjqtT5MFPQ",
+             'format_audio': "audio/mpeg",
+             'button_name': "Слушать на стриминговых площадках",
+             'url_button': "https://band.link/APa9s",
+             'icon_button': "🎵"},
             ]
 
 PHOTO_PRE = ["photo/8318.jpg", "photo/8320.jpg"]
@@ -121,15 +127,6 @@ def go_streamlit():
             releas['url_button'], releas['icon_button'])
 
             st.divider()
-        
-        st.image("photo/7.jpg")
-        st.write("Выходит 03 августа 2026.")
-        st.link_button("Можно сделать пресейв, чтобы точно не пропустить выход релиза!",
-                        url="https://band.link/Sj9uI",
-                        icon="🎵"
-                    )
-
-        st.divider()
 
     # Раздел с фото
     photos(PHOTO_POST)
