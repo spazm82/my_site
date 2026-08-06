@@ -128,6 +128,13 @@ def go_streamlit():
 
             st.divider()
 
+        st.image("photo/8.jpg")
+        st.write("Выход релиза запланирован на 25.08.2026")
+        st.link_button("Сделать pre-save можно тут", url="https://band.link/VcSP4", icon="🎵")
+
+        st.divider()
+
+
     # Раздел с фото
     photos(PHOTO_POST)
     st.divider()
