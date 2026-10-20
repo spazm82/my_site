@@ -56,6 +56,12 @@ RELEASES = [{'photo': "photo/1.jpg",
              'button_name': "Слушать на стриминговых площадках",
              'url_button': "https://band.link/0NStg",
              'icon_button': "🎵"},
+             {'photo': "photo/10.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/Yj_nemy7a0G_Dg",
+             'format_audio': "audio/mpeg",
+             'button_name': "На стриминговых площадках песня пока не доступна",
+             'url_button': "https://music.yandex.ru/artist/25824937",
+             'icon_button': "🎵"},
             ]
 
 PHOTO_PRE = ["photo/8318.jpg", "photo/8320.jpg"]
