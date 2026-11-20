@@ -62,10 +62,16 @@ RELEASES = [{'photo': "photo/1.jpg",
              'button_name': "Слушать на стриминговых площадках",
              'url_button': "https://band.link/vfS1U",
              'icon_button': "🎵"},
+             {'photo': "photo/11.jpg",
+             'audio_ya_link': "https://disk.yandex.ru/d/ZWSjITpLZfCQog",
+             'format_audio': "audio/mpeg",
+             'button_name': "На стриминговых площадках пока не доступен трек",
+             'url_button': "https://music.yandex.ru/artist/25824937",
+             'icon_button': "🎵"},
             ]
 
 PHOTO_PRE = ["photo/8318.jpg", "photo/8320.jpg"]
-PHOTO_POST = ["photo/18.jpeg", "photo/15.jpeg"]
+PHOTO_POST = ["photo/9318.jpeg", "photo/9315.jpeg"]
 BUTTONS_SOC = [["Карточка музыканта на VK", "https://vk.ru/artist/spazm82", ":material/recommend:"],
                 ["Карточка музыканта на Яндекс.Музыка", "https://music.yandex.ru/artist/25824937", ":material/recommend:"],
                 ["Карточка музыканта на 4beat", "https://4beat.ru/id13934", ":material/recommend:"]
@@ -124,7 +130,7 @@ def go_streamlit():
 
     st.sidebar.header("""**Рад Вас приветствовать на моём сайте!**\nМеня зовут **Мезенцев Александр**. В своё свободное время я пишу музыку и песни, а мой
                       сценический псевдоним **spazm82**.\nКак песни, так и музыка пишется мной в разных жанрах. Настолько разных, что даже как-то объединить\nих по какому-то одному
-                      направлению просто не возможно! От зубодоробительной смеси "тяжёлой" музыки, до миролюбивой "попсятинки".\nДобро пожаловать
+                      направлению просто не возможно! От зубодробительной смеси "тяжёлой" музыки, до миролюбивой "попсятинки".\nДобро пожаловать
                       в гости к **spazm82**, дорогой друг!""")
 
     # Раздел с кнопками на карточки музыканта
